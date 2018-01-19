@@ -11,3 +11,6 @@
 /node_modules/
 /package-lock.json # Removing because we use yarn.lock
 /yarn-error.log
+
+# Build folder
+/build/
