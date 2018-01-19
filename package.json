@@ -12,7 +12,7 @@
     "description": "Looks for numbers in file names and lists them for you",
     "main": "build/findRelatedFiles.js",
     "dependencies": {
-        "@babel/runtime": "7.0.0-beta.37",
+        "@babel/runtime": "7.0.0-beta.38",
         "commander": "^2.13.0",
         "dotenv": "^4.0.0",
         "fs-extra": "^5.0.0",
@@ -20,11 +20,11 @@
         "winston": "^2.4.0"
     },
     "devDependencies": {
-        "@babel/core": "7.0.0-beta.37",
-        "@babel/plugin-transform-runtime": "7.0.0-beta.37",
-        "@babel/preset-env": "7.0.0-beta.37",
-        "@babel/preset-stage-1": "7.0.0-beta.37",
-        "@babel/register": "7.0.0-beta.37",
+        "@babel/core": "7.0.0-beta.38",
+        "@babel/plugin-transform-runtime": "7.0.0-beta.38",
+        "@babel/preset-env": "7.0.0-beta.38",
+        "@babel/preset-stage-1": "7.0.0-beta.38",
+        "@babel/register": "7.0.0-beta.38",
         "babel-core": "^6.26.0",
         "babel-plugin-lodash": "^3.3.2",
         "babel-preset-minify": "0.3.0-alpha.ac576234",
