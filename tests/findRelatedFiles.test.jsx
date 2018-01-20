@@ -1,21 +1,19 @@
-import fs from "fs"
-import mock from "mock-fs"
+import mockFs from "mock-fs"
+import findRelatedFiles from "../src/findRelatedFiles"
 
-
-beforeAll(() => {
-    mock({
-        "path/to/file.txt": "my text content"
-    })
-})
-
-
-afterAll(() => {
-    mock.restore()
+afterEach(() => {
+    mockFs.restore()
 })
 
 test("Basic test", () => {
 
-    console.log(fs.readFileSync("path/to/file.txt", "UTF8"))
+    mockFs({
+        "/test/1.png": "a",
+        "/test/2.png": "b",
+        "/test/3.png": "c"
+    })
+
+    const result = findRelatedFiles.glob("/test/")
+    expect(result?.pattern).toBe("digitsOnly")
 
 })
-
