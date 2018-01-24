@@ -1,5 +1,5 @@
 import mockFs from "mock-fs"
-import findRelatedFiles from "../src/findRelatedFiles"
+import {findNumbersInGlob} from "../src/index"
 
 afterEach(() => {
     mockFs.restore()
@@ -9,11 +9,11 @@ test("Basic test", () => {
 
     mockFs({
         "/test/1.png": "a",
-        "/test/2.png": "b",
-        "/test/3.png": "c"
+        "/test/3.png": "b",
+        "/test/4.png": "c",
     })
 
-    const result = findRelatedFiles.glob("/test/")
+    const result = findNumbersInGlob("/test/")
     expect(result?.pattern).toBe("digitsOnly")
 
 })

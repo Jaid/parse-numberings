@@ -1,7 +1,5 @@
 module.exports = {
     templates: {
-        linenums: true,
-        outputSourceFiles: true,
         dateFormat: "DD.MM.YYYY hh:mm",
         syntaxTheme: "dark",
         inverseNav: true,
