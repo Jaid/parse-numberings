@@ -6,7 +6,7 @@ import gulpSourcemaps from "gulp-sourcemaps"
 
 const isDevelopment = process.env.NODE_ENV !== "production"
 
-gulp.task("clean", () => gulp.src("./build/", {read: false})
+gulp.task("clean", () => gulp.src(["./build/", "./out/"], {read: false})
     .pipe(gulpClean()))
 
 gulp.task("babel", () => gulp.src(["./src/**/*.jsx"])

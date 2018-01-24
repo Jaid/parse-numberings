@@ -2,6 +2,15 @@ import glob from "globby"
 import lodash from "lodash"
 import path from "path"
 
+/**
+ * Finds matching numbers in a list of strings
+ * @param {string[]} strings
+ * @param options
+ */
+function findInStrings(strings, options) {
+
+}
+
 function getNumbersByRegex(files, regexPattern) {
     const numbers = {}
     for (const file of files) {
