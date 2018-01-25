@@ -6,7 +6,7 @@
         "email": "jaid.jsx@gmail.com"
     },
     "name": "numbered-list",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "repository": "https://github.com/jaid/numbered-list",
     "description": "Looks for related numbers in strings or file names and lists them for you",
     "main": "build/index.js",
