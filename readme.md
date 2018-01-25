@@ -14,7 +14,7 @@ npm install --save numbered-list
 
 ## Usage
 
-#### Finding numbers in strings
+### Finding numbers in strings
 
 ```jsx
 import { findNumbersInStrings } from "numbered-list"
@@ -39,7 +39,7 @@ gives:
 }
 ```
 
-#### result.pattern
+### result.pattern
 
 The result object contains `pattern` which names the RegExp pattern that has successfully been applied on every entry of your list.
 
@@ -66,7 +66,7 @@ gives:
 }
 ```
 
-#### Duplicates
+### Duplicates
 
 By default, `findNumbersInStrings` returns `null` if it found duplicates and couldn't think of any sane way to exclude them. You can explicitly allow them with `options.allowDuplicates`.
 
@@ -99,7 +99,7 @@ gives:
 }
 ```
 
-#### Skipped numbers
+### Skipped numbers
 
 By default, `findNumbersInStrings` returns `null` if there are any missing numbers between the lowest and the highest numeric key. You can explicitly allow them with `options.allowSkippedNumbers`.
 
@@ -128,7 +128,7 @@ gives:
 }
 ```
 
-#### Map
+### Map
 
 You can also give me two strings per list entry, one for the representation and one for the number search.
 
@@ -155,7 +155,7 @@ gives:
 }
 ```
 
-#### File names
+### File names
 
 This example demonstrates how this library could actually be useful!
 
