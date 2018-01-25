@@ -3,4 +3,4 @@ node_js:
   - '8'
 cache: yarn
 script:
-  - yarn jest && node_modules/.bin/codecov
+  - yarn jest --coverage && node_modules/.bin/codecov
