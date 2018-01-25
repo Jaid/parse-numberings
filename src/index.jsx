@@ -13,10 +13,11 @@ function findInStringByRegex(string, regexPattern) {
     const regexResult = regexPattern.exec(string)
     if (regexResult) {
         const capturedGroup = regexResult[1]
-        if (lodash.isNaN(capturedGroup)) {
+        const capturedGroupNumber = Number(capturedGroup)
+        if (lodash.isNaN(capturedGroupNumber)) {
             return null
         }
-        return lodash.toInteger(capturedGroup)
+        return capturedGroupNumber
     }
     return null
 }
@@ -29,22 +30,7 @@ function findInStringByRegex(string, regexPattern) {
  */
 function findInStringsByRegex(strings, regexPattern) {
     const numbers = {}
-    if (lodash.isObject(strings)) {
-        for (const [key, string] of Object.entries(strings)) {
-            const number = findInStringByRegex(string, regexPattern)
-            if (number === null) {
-                return null
-            }
-            const currentValue = numbers[number]
-            if (currentValue === undefined) {
-                numbers[number] = key
-            } else if (lodash.isString(currentValue)) {
-                numbers[number] = [currentValue, key]
-            } else {
-                numbers[number].push(key)
-            }
-        }
-    } else {
+    if (lodash.isArray(strings)) {
         for (const string of strings) {
             const number = findInStringByRegex(string, regexPattern)
             if (number === null) {
@@ -57,6 +43,21 @@ function findInStringsByRegex(strings, regexPattern) {
                 numbers[number] = [currentValue, string]
             } else {
                 numbers[number].push(currentValue)
+            }
+        }
+    } else {
+        for (const [key, string] of Object.entries(strings)) {
+            const number = findInStringByRegex(string, regexPattern)
+            if (number === null) {
+                return null
+            }
+            const currentValue = numbers[number]
+            if (currentValue === undefined) {
+                numbers[number] = key
+            } else if (lodash.isString(currentValue)) {
+                numbers[number] = [currentValue, key]
+            } else {
+                numbers[number].push(key)
             }
         }
     }
