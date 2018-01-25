@@ -1,5 +1,4 @@
 {
-    "private": true,
     "license": "MIT",
     "author": {
         "name": "Jaid",
@@ -10,7 +9,10 @@
     "version": "0.1.0",
     "repository": "https://github.com/jaid/numbered-list",
     "description": "Looks for related numbers in strings or file names and lists them for you",
-    "main": "build/findRelatedFiles.js",
+    "main": "build/index.js",
+    "files": [
+        "build/*"
+    ],
     "dependencies": {
         "@babel/runtime": "7.0.0-beta.38",
         "commander": "^2.13.0",
