@@ -6,9 +6,9 @@
         "url": "https://github.com/jaid",
         "email": "jaid.jsx@gmail.com"
     },
-    "name": "related-files",
+    "name": "numbered-list",
     "version": "0.1.0",
-    "repository": "https://github.com/jaid/related-files",
+    "repository": "https://github.com/jaid/numbered-list",
     "description": "Looks for numbers in file names and lists them for you",
     "main": "build/findRelatedFiles.js",
     "dependencies": {
