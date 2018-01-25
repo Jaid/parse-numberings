@@ -9,7 +9,7 @@
     "name": "numbered-list",
     "version": "0.1.0",
     "repository": "https://github.com/jaid/numbered-list",
-    "description": "Looks for numbers in file names and lists them for you",
+    "description": "Looks for related numbers in strings or file names and lists them for you",
     "main": "build/findRelatedFiles.js",
     "dependencies": {
         "@babel/runtime": "7.0.0-beta.38",
@@ -17,8 +17,7 @@
         "dotenv": "^4.0.0",
         "fs-extra": "^5.0.0",
         "globby": "^7.1.1",
-        "lodash": "^4.17.4",
-        "winston": "^2.4.0"
+        "lodash": "^4.17.4"
     },
     "devDependencies": {
         "@babel/core": "7.0.0-beta.38",

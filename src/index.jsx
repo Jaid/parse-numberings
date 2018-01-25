@@ -80,7 +80,8 @@ function findInStrings(strings, options) {
             digitsLeft: /^(\d+)/,
             digitsInBracesRight: /[\[({](\d+)[\])}]$/,
             digitsInBracesLeft: /^[\[({](\d+)[\])}]/,
-            digitsAnywhere: /(\d+)/
+            digitsAnywhereRight: /.*(\d+)/,
+            digitsAnywhereLeft: /(\d+)/
         },
         additionalPatterns: {},
         allowDuplicates: false,
