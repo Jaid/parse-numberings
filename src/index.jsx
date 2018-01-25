@@ -18,28 +18,46 @@ function findInStringByRegex(string, regexPattern) {
         }
         return lodash.toInteger(capturedGroup)
     }
+    return null
 }
 
 /**
  * Finds matching numbers in a list of strings by given regex pattern.
- * @param {string[]} strings
+ * @param {string[]|Object.<string, string>} strings
  * @param {RegExp} regexPattern
  * @returns {Object.<number, string|string[]>}
  */
 function findInStringsByRegex(strings, regexPattern) {
     const numbers = {}
-    for (const string of strings) {
-        const number = findInStringByRegex(string, regexPattern)
-        if (number === null) {
-            return null
+    if (lodash.isObject(strings)) {
+        for (const [key, string] of Object.entries(strings)) {
+            const number = findInStringByRegex(string, regexPattern)
+            if (number === null) {
+                return null
+            }
+            const currentValue = numbers[number]
+            if (currentValue === undefined) {
+                numbers[number] = key
+            } else if (lodash.isString(currentValue)) {
+                numbers[number] = [currentValue, key]
+            } else {
+                numbers[number].push(key)
+            }
         }
-        const currentValue = numbers[number]
-        if (currentValue === undefined) {
-            numbers[number] = string
-        } else if (lodash.isString(currentValue)) {
-            numbers[number] = [currentValue, string]
-        } else {
-            numbers[number].push(currentValue)
+    } else {
+        for (const string of strings) {
+            const number = findInStringByRegex(string, regexPattern)
+            if (number === null) {
+                return null
+            }
+            const currentValue = numbers[number]
+            if (currentValue === undefined) {
+                numbers[number] = string
+            } else if (lodash.isString(currentValue)) {
+                numbers[number] = [currentValue, string]
+            } else {
+                numbers[number].push(currentValue)
+            }
         }
     }
     return numbers
@@ -47,15 +65,21 @@ function findInStringsByRegex(strings, regexPattern) {
 
 /**
  * Finds matching numbers in a list of strings by given options.
- * @param {string[]} strings
+ * @param {string[]|Object.<string, string>} strings
  * @param {Object} options
  * @param {Object.<string, RegExp>} options.patterns
  * @param {Object.<string, RegExp>} [options.additionalPatterns]
+ * @returns {?{numbers, pattern}}
  */
 function findInStrings(strings, options) {
     options = {
         patterns: {
-            "digitsOnly": /(\d+)/
+            digitsOnly: /^(\d+)$/,
+            digitsRight: /(\d+)$/,
+            digitsLeft: /^(\d+)/,
+            digitsInBracesRight: /[\[({](\d+)[\])}]$/,
+            digitsInBracesLeft: /^[\[({](\d+)[\])}]/,
+            digitsAnywhere: /(\d+)/
         },
         additionalPatterns: {},
         allowDuplicates: false,
@@ -63,8 +87,8 @@ function findInStrings(strings, options) {
         ...options
     }
     const allPatterns = {
-        ...options.patterns,
-        ...options.additionalPatterns
+        ...options.additionalPatterns,
+        ...options.patterns
     }
     if (lodash.isEmpty(allPatterns)) {
         throw new Error("No patterns given")
@@ -86,16 +110,20 @@ function findInStrings(strings, options) {
             }
         }
     }
+    return null
 }
 
 /**
  * Finds matching numbers in a list of files paths (or file names) by given options.
- * @param files
+ * @param {string[]} files
  * @param options
- * @returns {{pattern, files}}
+ * @returns {?{pattern, files}}
  */
 function findInFiles(files, options) {
-    return findInStrings(files.map(file => path.parse(file).name), options)
+    return findInStrings(files.reduce((map, file) => {
+        map[file] = path.parse(file).name
+        return map
+    }, {}), options)
 }
 
 /**
@@ -103,10 +131,10 @@ function findInFiles(files, options) {
  * @see {@link https://github.com/isaacs/node-glob#glob-primer} for glob pattern syntax.
  * @param globPattern A glob pattern
  * @param options
- * @returns {*}
+ * @returns {?{pattern, files}}
  */
 function findByGlob(globPattern, options) {
-    return findInFiles(glob.sync(globPattern, options?.globOptions))
+    return findInFiles(glob.sync(globPattern, options?.globOptions), options)
 }
 
 exports.findNumbersInGlob = findByGlob

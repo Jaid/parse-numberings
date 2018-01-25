@@ -1,7 +1,6 @@
 module.exports = {
     templates: {
         dateFormat: "DD.MM.YYYY hh:mm",
-        syntaxTheme: "dark",
         inverseNav: true,
         search: false,
         theme: "united"

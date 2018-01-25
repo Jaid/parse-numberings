@@ -17,3 +17,6 @@
 
 # JSDoc
 /out/
+
+# Jest
+/coverage/
