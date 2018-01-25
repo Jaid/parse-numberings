@@ -180,10 +180,9 @@ File system:
 ```
 
 ```jsx
-import { findNumbersByGlob } from "numbered-list"
+import { findNumbersInGlob } from "numbered-list"
 
-const result = findNumbersInGlob("/education/**/*.mp3")
-expect(result?.pattern).toBe("digitsAnywhereLeft")
+findNumbersInGlob("/education/**/*.mp3")
 ```
 
 gives:
