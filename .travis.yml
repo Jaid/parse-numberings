@@ -3,9 +3,9 @@ node_js:
   - '8'
 cache: yarn
 script: # && instead of YAML array, see: https://github.com/travis-ci/travis-ci/issues/1066
-  - yarn jest --coverage && node_modules/.bin/codecov && yarn jsdoc && mv out/*/*/* out
+  - yarn jest --coverage && node_modules/.bin/codecov && yarn jsdoc && mkdir -p surge-docs && mv out/*/*/** surge-docs
 deploy:
   provider: surge
-  project: ./out/numbered-list
+  project: ./surge-docs
   domain: numbered-list.docs.j4id.com
   skip_cleanup: true
