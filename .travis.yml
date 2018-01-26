@@ -8,3 +8,4 @@ deploy:
   provider: surge
   project: ./out/numbered-list
   domain: numbered-list.docs.j4id.com
+  skip_cleanup: true
