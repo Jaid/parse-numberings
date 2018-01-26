@@ -3,7 +3,7 @@ node_js:
   - '8'
 cache: yarn
 script: # && instead of YAML array, see: https://github.com/travis-ci/travis-ci/issues/1066
-  - yarn jest --coverage && node_modules/.bin/codecov && yarn jsdoc
+  - yarn jest --coverage && node_modules/.bin/codecov && yarn jsdoc && mv out/*/*/* out
 deploy:
   provider: surge
   project: ./out/numbered-list
