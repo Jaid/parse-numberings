@@ -11,5 +11,8 @@ module.exports = {
         readme: "readme.md",
         template: "node_modules/ink-docstrap/template"
     },
-    plugins: ["plugins/markdown"]
+    plugins: ["plugins/markdown"],
+    source: {
+        "include": ["src/"],
+    }
 }

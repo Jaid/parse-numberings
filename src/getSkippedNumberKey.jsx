@@ -1,5 +1,6 @@
 /**
  * Looks for any gaps in the numeric keys of given object.
+ * @private
  * @param {Object.<number,*>} object
  * @returns {boolean|number} `false` if there are no gaps in the keys, or a number representing the first missing key found
  */

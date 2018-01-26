@@ -1,3 +1,11 @@
+/**
+ * @typedef {Object} FindOptions
+ * @property {Object.<string, RegExp>} [options.patterns] A map of patterns that capture numeric matches in a group
+ * @property {Object.<string, RegExp>} [options.additionalPatterns] An additional map of patterns that capture numeric matches in a group (so you don't have to overwrite `options.patterns` if you just want to add your own ones)
+ * @property {boolean} [options.allowDuplicates] If `true`, could return a valid result instead of `null` if multiple occurrences of the same number were found
+ * @property {boolean} [options.allowSkippedNumbers] If `true`, could return a valid result instead of `null` if a number between the lowest found number and the highest found number was found
+ */
+
 import glob from "globby"
 import lodash from "lodash"
 import path from "path"
@@ -5,6 +13,7 @@ import getSkippedNumberKey from "./getSkippedNumberKey"
 
 /**
  * Matches a string by a given regex pattern to find a number.
+ * @private
  * @param {string} string The string that may contain numbers
  * @param {RegExp} regexPattern The pattern that captures numeric matches in a group
  * @returns {?number}
@@ -24,6 +33,7 @@ function findInStringByRegex(string, regexPattern) {
 
 /**
  * Finds matching numbers in a list of strings by given regex pattern.
+ * @private
  * @param {string[]|Object.<string, string>} strings The string list or string map to search numbers in
  * @param {RegExp} regexPattern The pattern that captures numeric matches in a group
  * @returns {?Object.<number, string|string[]>}
@@ -67,11 +77,7 @@ function findInStringsByRegex(strings, regexPattern) {
 /**
  * Finds matching numbers in a list of strings by given options.
  * @param {string[]|Object.<string, string>} strings The string list or string map to search numbers in
- * @param {Object.<string, *>} options An options object
- * @param {Object.<string, RegExp>} options.patterns A map of patterns that capture numeric matches in a group
- * @param {Object.<string, RegExp>} [options.additionalPatterns] An additional map of patterns that capture numeric matches in a group (so you don't have to overwrite `options.patterns` if you just want to add your own ones)
- * @param {boolean} [options.allowDuplicates] If `true`, could return a valid result instead of `null` if multiple occurrences of the same number were found
- * @param {boolean} [options.allowSkippedNumbers] If `true`, could return a valid result instead of `null` if a number between the lowest found number and the highest found number was found
+ * @param {FindOptions} [options] An options object
  * @returns {?{numbers, pattern}} A result object if valid numbers were found, `null` otherwise
  */
 function findInStrings(strings, options) {
@@ -120,7 +126,7 @@ function findInStrings(strings, options) {
 /**
  * Finds matching numbers in a list of files paths (or file names) by given options.
  * @param {string[]} files
- * @param {Object.<string, *>} options An option object
+ * @param {FindOptions} options An option object
  * @returns {?{pattern, files}} A result object if valid numbers were found, `null` otherwise
  */
 function findInFiles(files, options) {
@@ -134,7 +140,8 @@ function findInFiles(files, options) {
  * Finds matching numbers in a list of files (applying to specified glob pattern) by given options.
  * @see {@link https://github.com/isaacs/node-glob#glob-primer} for glob pattern syntax.
  * @param globPattern A glob pattern
- * @param {Object.<string, *>} options An option object
+ * @param {FindOptions} options An option object
+ * @param {Object} [options.globOptions] a
  * @returns {?{pattern, files}} A result object if valid numbers were found, `null` otherwise
  */
 function findInGlob(globPattern, options) {

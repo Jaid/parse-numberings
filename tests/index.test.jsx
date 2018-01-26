@@ -65,14 +65,14 @@ describe("File system tests", () => {
 
         mockFs({
             "/education": {
-                "Part 0 - Very educational intro.mp3": "",
-                "Part 04 - Very educational intro.mp3": "",
+                "Part 0 - Very educational intro.mp3": "Beep boop",
+                "Part 04 - Very educational intro.mp3": "Beep boop",
                 "Chapter 1": {
                     "Part 01 - How 2 spell DOG.mp3": "Beep boop",
                     "Part 02 - How 2 train your doggo.mp3": "Beep boop",
                     "Part 03 - How 2 train your keyboard to spell DOG for you.mp3": "Beep boop",
                     "readme.md": "edu[cat](https://i.imgur.com/jlFgGpe.jpg)ion",
-                    "How a dog looks like": {
+                    "What a dog looks like": {
                         "Actual dog.bmp": "Woof (intense)",
                         "Human in dog costume.apng": "Woof (in tents)",
                         "Human identifying hirself as a dog.rmvb": "Stop raping me on Twitter!"

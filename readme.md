@@ -169,7 +169,7 @@ File system:
 │   ├── Part 02 - How 2 train your doggo.mp3
 │   ├── Part 03 - How 2 train your keyboard to spell DOG for you.mp3
 │   ├── readme.md
-│   └── How a dog looks like/
+│   └── What a dog looks like/
 │       ├── Actual dog.bmp
 │       ├── Human in dog costume.apng
 │       └── Human identifying hirself as a dog.rmvb

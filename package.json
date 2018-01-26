@@ -49,6 +49,6 @@
         "build-dev": "./node_modules/.bin/gulp babel",
         "run-prod": "npm run build-prod && node build/index.js",
         "run-dev": "npm run build-dev && node build/index.js",
-        "jsdoc": "node_modules/.bin/jsdoc --configure .jsdoc.config.js src/"
+        "jsdoc": "node_modules/.bin/jsdoc --configure .jsdoc.config.js"
     }
 }
