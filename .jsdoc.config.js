@@ -1,15 +1,12 @@
 module.exports = {
     templates: {
         dateFormat: "DD.MM.YYYY hh:mm",
-        inverseNav: true,
-        search: false,
-        theme: "united"
+        search: false
     },
     opts: {
         recurse: true,
         package: "package.json",
         readme: "readme.md",
-        template: "node_modules/ink-docstrap/template"
     },
     plugins: ["plugins/markdown"],
     source: {
