@@ -5,7 +5,7 @@ cache: yarn
 before_install:
   - yarn global add codecov
 script: # && instead of YAML array, see: https://github.com/travis-ci/travis-ci/issues/1066
-  - yarn jest --coverage && codecov && yarn jsdoc && mkdir -p surge-docs && mv out/*/*/** surge-docs
+  - yarn build-prod && yarn jest --coverage && codecov && yarn jsdoc && mkdir -p surge-docs && mv out/*/*/** surge-docs
 deploy:
   provider: surge
   project: ./surge-docs
