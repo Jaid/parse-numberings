@@ -1,6 +1,6 @@
 # numbered-list
 
-Looks for related numbers in strings or file names and lists them for you. The detection is done in a heuristic way, but `numbered-list` helps you to decide if the results 
+Finds and understands numberings in strings and file names. The detection is done in a heuristic way, but `numbered-list` helps you to decide if the results 
 
 ## Installation
 

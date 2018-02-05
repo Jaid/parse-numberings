@@ -8,7 +8,7 @@
     "name": "numbered-list",
     "version": "0.2.0",
     "repository": "https://github.com/jaid/numbered-list",
-    "description": "Looks for related numbers in strings or file names and lists them for you",
+    "description": "Finds and understands numberings in strings and file names",
     "main": "build/index.js",
     "files": [
         "build/*"
