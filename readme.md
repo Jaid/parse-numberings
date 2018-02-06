@@ -1,6 +1,6 @@
 # numbered-list
 
-Finds and understands numberings in strings and file names. The detection is done in a heuristic way, but `numbered-list` helps you to decide if the results 
+Finds and understands numberings in strings and file names. The detection is done in a heuristic way, but `numbered-list` helps you to decide if the results are reasonable or not.
 
 ## Installation
 
