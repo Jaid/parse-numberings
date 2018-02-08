@@ -5,9 +5,9 @@
         "url": "https://github.com/jaid",
         "email": "jaid.jsx@gmail.com"
     },
-    "name": "numbered-list",
+    "name": "parse-numberings",
     "version": "0.2.0",
-    "repository": "https://github.com/jaid/numbered-list",
+    "repository": "https://github.com/jaid/parse-numberings",
     "description": "Finds and understands numberings in strings and file names",
     "main": "build/index.js",
     "files": [

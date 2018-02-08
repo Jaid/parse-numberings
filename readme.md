@@ -1,15 +1,15 @@
-# numbered-list
+# parse-numberings
 
-Finds and understands numberings in strings and file names. The detection is done in a heuristic way, but `numbered-list` helps you to decide if the results are reasonable or not.
+Finds and understands numberings in strings and file names. The detection is done in a heuristic way, but `parse-numberings` helps you to decide if the results are reasonable or not.
 
 ## Installation
 
 ```bash
-yarn add numbered-list
+yarn add parse-numberings
 ```
 or even
 ```bash
-npm install --save numbered-list
+npm install --save parse-numberings
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ npm install --save numbered-list
 ### Finding numbers in strings
 
 ```jsx
-import { findNumbersInStrings } from "numbered-list"
+import { findNumbersInStrings } from "parse-numberings"
 
 const strings = [
     "String #1",
@@ -44,7 +44,7 @@ gives:
 The result object contains `pattern` which names the RegExp pattern that has successfully been applied on every entry of your list.
 
 ```jsx
-import { findNumbersInStrings } from "numbered-list"
+import { findNumbersInStrings } from "parse-numberings"
 
 const strings = [
     "[1] first entry",
@@ -71,7 +71,7 @@ gives:
 By default, `findNumbersInStrings` returns `null` if it found duplicates and couldn't think of any sane way to exclude them. You can explicitly allow them with `options.allowDuplicates`.
 
 ```jsx
-import { findNumbersInStrings } from "numbered-list"
+import { findNumbersInStrings } from "parse-numberings"
 
 const strings = [
     "1: first entry",
@@ -104,7 +104,7 @@ gives:
 By default, `findNumbersInStrings` returns `null` if there are any missing numbers between the lowest and the highest numeric key. You can explicitly allow them with `options.allowSkippedNumbers`.
 
 ```jsx
-import { findNumbersInStrings } from "numbered-list"
+import { findNumbersInStrings } from "parse-numberings"
 
 const strings = [
     "> 1 GIFF",
@@ -133,7 +133,7 @@ gives:
 You can also give me two strings per list entry, one for the representation and one for the number search.
 
 ```jsx
-import { findNumbersInStrings } from "numbered-list"
+import { findNumbersInStrings } from "parse-numberings"
 
 const strings = {
     linus: "Human #96651738921",
@@ -180,7 +180,7 @@ File system:
 ```
 
 ```jsx
-import { findNumbersInGlob } from "numbered-list"
+import { findNumbersInGlob } from "parse-numberings"
 
 findNumbersInGlob("/education/**/*.mp3")
 ```
