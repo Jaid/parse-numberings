@@ -9,5 +9,5 @@ script: # && instead of YAML array, see: https://github.com/travis-ci/travis-ci/
 deploy:
   provider: surge
   project: ./surge-docs
-  domain: numbered-list.docs.j4id.com
+  domain: parse-numberings.docs.j4id.com
   skip_cleanup: true
