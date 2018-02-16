@@ -1,7 +1,7 @@
 # parse-numberings
 
 [![License](https://img.shields.io/npm/l/parse-numberings.svg)](https://github.com/Jaid/parse-numberings/blob/master/license.txt)
-[![Travis build](https://travis-ci.org/jaid/parse-numberings.svg)](https://travis-ci.org/Jaid/parse-numberings)
+[![Travis build](https://travis-ci.org/Jaid/parse-numberings.svg)](https://travis-ci.org/Jaid/parse-numberings)
 [![Code coverage](https://codecov.io/gh/Jaid/parse-numberings/graph/badge.svg)](https://codecov.io/gh/Jaid/parse-numberings)
 [![npm package](https://img.shields.io/npm/v/parse-numberings.svg)](https://www.npmjs.com/package/parse-numberings)
 [![Documentation](https://img.shields.io/badge/Documentation-parse--numberings.docs.j4id.com-blue.svg)](http://parse-numberings.docs.j4id.com)
