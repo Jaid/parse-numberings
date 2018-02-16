@@ -161,20 +161,20 @@ This example demonstrates how this library could actually be useful!
 
 File system:
 ```plain
-/education/
+📁 /education/
 ├── Part 0 - Very educational intro.mp3
 ├── Part 04 - Ery veducational outro.mp3
-├── Chapter 1/
+├── 📁 Chapter 1/
 │   ├── Part 01 - How 2 spell DOG.mp3
 │   ├── Part 02 - How 2 train your doggo.mp3
 │   ├── Part 03 - How 2 train your keyboard to spell DOG for you.mp3
 │   ├── readme.md
-│   └── What a dog looks like/
+│   └── 📁 What a dog looks like/
 │       ├── Actual dog.bmp
 │       ├── Human in dog costume.apng
 │       └── Human identifying hirself as a dog.rmvb
-└── Chapter 2/
-    └── Bonus content/
+└── 📁 Chapter 2/
+    └── 📁 Bonus content/
         ├── (Bonus) Part 05 - How 2 haunt a house - Part 1.mp3
         └── (Bonus) Part 06 - How 2 haunt a house - Part 2.mp3
 ```
