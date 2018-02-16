@@ -4,8 +4,8 @@
 [![Travis build](https://travis-ci.org/Jaid/parse-numberings.svg)](https://travis-ci.org/Jaid/parse-numberings)
 [![Code coverage](https://codecov.io/gh/Jaid/parse-numberings/graph/badge.svg)](https://codecov.io/gh/Jaid/parse-numberings)
 [![npm package](https://img.shields.io/npm/v/parse-numberings.svg)](https://www.npmjs.com/package/parse-numberings)
-[![Documentation](https://img.shields.io/badge/Documentation-parse--numberings.docs.j4id.com-blue.svg)](http://parse-numberings.docs.j4id.com)
-[![Donate button](https://img.shields.io/badge/Donate-PayPal-ff69b4.svg)](http://donate.j4id.com)
+[![Documentation](https://img.shields.io/badge/documentation-parse--numberings.docs.j4id.com-blue.svg)](http://parse-numberings.docs.j4id.com)
+[![Donate button](https://img.shields.io/badge/donate-PayPal-ff69b4.svg)](http://donate.j4id.com)
 
 Finds and understands numberings in strings and file names. The detection is done in a heuristic way, but `parse-numberings` helps you to decide if the results are reasonable or not.
 
