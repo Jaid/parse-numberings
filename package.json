@@ -6,7 +6,7 @@
         "email": "jaid.jsx@gmail.com"
     },
     "name": "parse-numberings",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "repository": "https://github.com/jaid/parse-numberings",
     "description": "Finds and understands numberings in strings and file names",
     "main": "build/index.js",
