@@ -1,6 +1,5 @@
 # parse-numberings
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/Jaid/parse-numberings.svg)](https://greenkeeper.io/)
 [![License](https://img.shields.io/npm/l/parse-numberings.svg)](https://github.com/Jaid/parse-numberings/blob/master/license.txt)
 [![Travis build](https://travis-ci.org/jaid/parse-numberings.svg)](https://travis-ci.org/Jaid/parse-numberings)
 [![Code coverage](https://codecov.io/gh/Jaid/parse-numberings/graph/badge.svg)](https://codecov.io/gh/Jaid/parse-numberings)
