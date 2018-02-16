@@ -109,6 +109,18 @@ test("String search", () => {
 
 })
 
+test("digitsAnywhereRight pattern", () => {
+
+    const result = findNumbersInStrings([
+        ">0 RARE 2 ..>",
+        ">0 GIFF 1 .>",
+        ">0 PEPE 3 ...>"
+    ])
+
+    expect(result?.pattern).toBe("digitsAnywhereRight")
+
+})
+
 test("Error: No patterns given", () => {
 
     const call = () => findNumbersInStrings(["1"], {
