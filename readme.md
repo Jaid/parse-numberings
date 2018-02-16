@@ -1,5 +1,7 @@
 # parse-numberings
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Jaid/parse-numberings.svg)](https://greenkeeper.io/)
+
 Finds and understands numberings in strings and file names. The detection is done in a heuristic way, but `parse-numberings` helps you to decide if the results are reasonable or not.
 
 ## Installation
