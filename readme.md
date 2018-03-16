@@ -208,5 +208,3 @@ gives:
     "pattern": "digitsAnywhereLeft"
 }
 ```
-
-## Simply finding numbers
