@@ -9,7 +9,7 @@
 
 Finds and understands numberings in strings and file names. The detection is done in a heuristic way, but `parse-numberings` helps you to decide if the results are reasonable or not.
 
-## Installation
+# Installation
 
 ```bash
 yarn add parse-numberings
@@ -19,9 +19,9 @@ or even
 npm install --save parse-numberings
 ```
 
-## Usage
+# Usage
 
-### Finding numbers in strings
+## Finding numbers in strings
 
 ```jsx
 import { findNumbersInStrings } from "parse-numberings"
@@ -46,9 +46,9 @@ gives:
 }
 ```
 
-### result.pattern
+## result.pattern
 
-The result object contains `pattern` which names the RegExp pattern that has successfully been applied on every entry of your list.
+The result object contains `pattern` string that tells you which RegExp pattern has successfully been applied on every entry of your list.
 
 ```jsx
 import { findNumbersInStrings } from "parse-numberings"
@@ -73,7 +73,7 @@ gives:
 }
 ```
 
-### Duplicates
+## Duplicates
 
 By default, `findNumbersInStrings` returns `null` if it found duplicates and couldn't think of any sane way to exclude them. You can explicitly allow them with `options.allowDuplicates`.
 
@@ -106,7 +106,7 @@ gives:
 }
 ```
 
-### Skipped numbers
+## Skipped numbers
 
 By default, `findNumbersInStrings` returns `null` if there are any missing numbers between the lowest and the highest numeric key. You can explicitly allow them with `options.allowSkippedNumbers`.
 
@@ -135,7 +135,7 @@ gives:
 }
 ```
 
-### Map
+## Map
 
 You can also give me two strings per list entry, one for the representation and one for the number search.
 
@@ -162,7 +162,7 @@ gives:
 }
 ```
 
-### File names
+## File names
 
 This example demonstrates how this library could actually be useful!
 
@@ -208,3 +208,5 @@ gives:
     "pattern": "digitsAnywhereLeft"
 }
 ```
+
+## Simply finding numbers
