@@ -2,15 +2,29 @@
 .env
 
 # Node packages
-/node_modules/
-/package-lock.json # Removing because we use yarn.lock
-/yarn-error.log
+node_modules
 
-# Build folder
-/build/
+# npm
+package-lock.json
+!/package-lock.json
+npm-debug.log
+npm-debug.log.*
+.npmrc
 
-# JSDoc
-/out/
+# pnpm
+shrinkwrap.yaml
+!/shrinkwrap.yaml
+pnpm-debug.log
 
-# Jest
-/coverage/
+# Yarn
+yarn.lock
+!/yarn.lock
+yarn-error.log
+
+# Generated or temporary content
+dist
+temp
+
+# IDEs
+/.vscode/
+/.idea/
