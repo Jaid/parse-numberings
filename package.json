@@ -35,5 +35,6 @@
     "prepareActionJest": "npm run build:prod"
   },
   "name": "parse-numberings",
-  "description": "Finds and understands numberings in strings and file names."
+  "description": "Finds and understands numberings in strings and file names.",
+  "funding": "https://github.com/sponsors/jaid"
 }
