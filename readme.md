@@ -1,9 +1,9 @@
 # parse-numberings
 
 
-<a href="https://raw.githubusercontent.com/Jaid/parse-numberings/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/parse-numberings?style=flat-square" alt="License"/></a>  
-<a href="https://actions-badge.atrox.dev/Jaid/parse-numberings/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fparse-numberings%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/parse-numberings/commits"><img src="https://img.shields.io/github/commits-since/Jaid/parse-numberings/v2.0.1?style=flat-square&logo=github" alt="Commits since v2.0.1"/></a> <a href="https://github.com/Jaid/parse-numberings/commits"><img src="https://img.shields.io/github/last-commit/Jaid/parse-numberings?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/parse-numberings/issues"><img src="https://img.shields.io/github/issues/Jaid/parse-numberings?style=flat-square&logo=github" alt="Issues"/></a>  
-<a href="https://npmjs.com/package/parse-numberings"><img src="https://img.shields.io/npm/v/parse-numberings?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/parse-numberings/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/parse-numberings?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/parse-numberings"><img src="https://img.shields.io/npm/dm/parse-numberings?style=flat-square&logo=npm" alt="Downloads"/></a>
+<a href="https://raw.githubusercontent.com/jaid/parse-numberings/master/license.txt"><img src="https://img.shields.io/github/license/jaid/parse-numberings?style=flat-square" alt="License"/></a> <a href="https://github.com/sponsors/jaid"><img src="https://img.shields.io/badge/<3-Sponsor-FF45F1?style=flat-square" alt="Sponsor parse-numberings"/></a>
+<a href="https://actions-badge.atrox.dev/jaid/parse-numberings/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2Fjaid%2Fparse-numberings%2Fbadge" alt="Build status"/></a> <a href="https://github.com/jaid/parse-numberings/commits"><img src="https://img.shields.io/github/commits-since/jaid/parse-numberings/v2.0.1?style=flat-square&logo=github" alt="Commits since v2.0.1"/></a> <a href="https://github.com/jaid/parse-numberings/commits"><img src="https://img.shields.io/github/last-commit/jaid/parse-numberings?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/jaid/parse-numberings/issues"><img src="https://img.shields.io/github/issues/jaid/parse-numberings?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/parse-numberings"><img src="https://img.shields.io/npm/v/parse-numberings?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/jaid/parse-numberings/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/parse-numberings?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/parse-numberings"><img src="https://img.shields.io/npm/dm/parse-numberings?style=flat-square&logo=npm" alt="Downloads"/></a>
 
 **Finds and understands numberings in strings and file names.**
 
@@ -37,14 +37,13 @@ yarn add parse-numberings@^2.0.1
 
 
 
-
 ## Development
 
 
 
 Setting up:
 ```bash
-git clone git@github.com:Jaid/parse-numberings.git
+git clone git@github.com:jaid/parse-numberings.git
 cd parse-numberings
 npm install
 ```
