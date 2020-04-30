@@ -41,5 +41,17 @@
     "url": "https://github.com/jaid/parse-numberings"
   },
   "homepage": "https://github.com/Jaid/parse-numberings",
-  "keywords": []
+  "keywords": [
+    "lib",
+    "library",
+    "numbering",
+    "numberings",
+    "parse",
+    "parse-numberings",
+    "parser",
+    "string",
+    "strings",
+    "util",
+    "utility"
+  ]
 }
