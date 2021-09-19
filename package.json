@@ -53,5 +53,6 @@
     "strings",
     "util",
     "utility"
-  ]
+  ],
+  "type": "module"
 }
